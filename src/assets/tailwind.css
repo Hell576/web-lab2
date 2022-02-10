@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-custom {
+    @apply mx-auto;
+    max-width: 1200px;
+  }
+  .beta-badge:after {
+    @apply border-l-2 border-red-500 h-10 flex items-center pl-4 text-xs absolute font-black uppercase;
+    letter-spacing: 0.7em;
+    left: 100%;
+    content: "Beta";
+  }
+}
+@layer utilities {
+  .squircle {
+    mask-image: paint(squircle);
+    --squircle-smooth: 1;
+    --squircle-radius: 0;
+  }
+  .squircle-3xl {
+    --squircle-radius: 20px;
+    border-radius: 20px;
+  }
+  .squircle-5xl {
+    --squircle-radius: 96px;
+    border-radius: 96px;
+  }
+  .squircle-lg {
+    --squircle-radius: 8px;
+    border-radius: 8px;
+  }
+
+  .fade-up {
+    background: linear-gradient(
+      360deg,
+      #0b0b0d 25%,
+      rgba(11, 11, 13, 0.9) 35%,
+      rgba(11, 11, 13, 0.8) 55%,
+      rgba(11, 11, 13, 0.5) 100%
+    );
+  }
+
+  .bg-abstract {
+    background: url("../assets/bgAbstract.png");
+    background-size: cover;
+  }
+}
